@@ -13,7 +13,7 @@ import {
 } from './routes/index.js';
 const app = express();
 app.use(cors());
-// app.use(checkToken);
+
 app.use(express.json());
 const port = process.env.PORT || 3000;
 
@@ -22,7 +22,6 @@ app.use('/products', productsRouter);
 app.use('/cart', cartsRouter);
 app.use('/iconCategories', iconCategoriesRouter);
 
-// app.use(morgan('combined'));
 app.get('/', (_req, res) => {
   res.send('response');
 });
