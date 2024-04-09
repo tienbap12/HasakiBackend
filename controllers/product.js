@@ -44,22 +44,6 @@ async function getDetailProduct(req, res) {
 }
 
 async function updateProduct(req, res) {
-  const {
-    id,
-    name,
-    category,
-    brand,
-    desc_vn,
-    desc_eng,
-    price,
-    discount,
-    old_price,
-    image,
-    rating,
-    rates,
-    products_sold,
-  } = req.body;
-
   try {
     const product = await productRepository.updateProduct(req.body);
     if (product.type === 'add') {

@@ -3,14 +3,13 @@ import * as dotenv from 'dotenv';
 import cors from 'cors';
 dotenv.config();
 import connect from './Database/database.js';
-//authentication middleware
-// import checkToken from './authentication/auth.js';
 import {
   usersRouter,
   productsRouter,
   cartsRouter,
   iconCategoriesRouter,
 } from './routes/index.js';
+
 const app = express();
 app.use(cors());
 

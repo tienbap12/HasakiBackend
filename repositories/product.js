@@ -1,5 +1,4 @@
 import Exception from '../errors/Exception.js';
-import { productData } from '../fakeData/index.js';
 import { Product } from '../models/index.js';
 
 const getAllProducts = async ({ page, size, searchString }) => {
@@ -36,47 +35,15 @@ const getDetailProduct = async (productId) => {
   return product;
 };
 
-const insertProduct = async ({
-  _id,
-  name,
-  category,
-  brand,
-  desc_vn,
-  desc_eng,
-  price,
-  discount,
-  old_price,
-  image,
-  rating,
-  rates,
-  products_sold,
-}) => {
+const insertProduct = async ({ productData }) => {
   try {
-    debugger;
-    const product = await Product.create({
-      _id,
-      name,
-      category,
-      brand,
-      desc_vn,
-      desc_eng,
-      price,
-      discount,
-      old_price,
-      image,
-      rating,
-      rates,
-      products_sold,
-    });
+    const product = await Product.create(productData);
     return product;
-    debugger;
   } catch (exception) {
     if (!!exception.errors) {
       throw new Exception('input error', exception.errors);
     }
-    debugger;
   }
-  debugger;
 };
 
 const importProducts = async () => {
@@ -140,7 +107,6 @@ const updateProduct = async ({
     product.rating = rating ?? product.rating;
     product.rates = rates ?? product.rates;
     product.products_sold = products_sold ?? product.products_sold;
-    //wait save to db continue return
     await product.save();
     return {
       type: 'add',
