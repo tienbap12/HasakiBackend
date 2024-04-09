@@ -1,7 +1,7 @@
 import express from 'express';
 import { body, validationResult } from 'express-validator';
-import { userController } from '../controllers/index.js';
-import checkToken from '../authentication/auth.js';
+import { userController } from '../Controllers/Index.js';
+import checkToken from '../Authentication/Auth.js';
 
 const router = express.Router();
 

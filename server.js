@@ -2,7 +2,7 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
 dotenv.config();
-import connect from './database/database.js';
+import connect from './Database/database.js';
 //authentication middleware
 // import checkToken from './authentication/auth.js';
 import {
@@ -23,7 +23,7 @@ app.use('/cart', cartsRouter);
 app.use('/iconCategories', iconCategoriesRouter);
 
 // app.use(morgan('combined'));
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send('response');
 });
 

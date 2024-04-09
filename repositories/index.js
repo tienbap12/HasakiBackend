@@ -1,7 +1,7 @@
-import userRepository from './user.js';
 import productRepository from './product.js';
-import cartRepository from './cart.js';
-import iconCategoriesRepository from './iconCategory.js';
+import userRepository from './User.js';
+import cartRepository from './Cart.js';
+import iconCategoriesRepository from './IconCategory.js';
 
 export {
   userRepository,

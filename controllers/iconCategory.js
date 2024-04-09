@@ -1,5 +1,5 @@
 import HttpStatusCode from '../helpers/HttpStatusCode.js';
-import { iconCategoriesRepository } from '../repositories/index.js';
+import { iconCategoriesRepository } from '../Repositories/Index.js';
 
 async function getAllCategories(req, res) {
   try {

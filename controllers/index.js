@@ -1,7 +1,7 @@
-import userController from './user.js';
-import productController from './product.js';
-import cartController from './cart.js';
-import iconCategoriesController from './iconCategory.js';
+import userController from './User.js';
+import productController from './Product.js';
+import cartController from './Cart.js';
+import iconCategoriesController from './IconCategory.js';
 export {
   userController,
   productController,

@@ -1,5 +1,5 @@
 import { body, validationResult } from 'express-validator';
-import { userRepository, productRepository } from '../repositories/index.js';
+import { userRepository, productRepository } from '../Repositories/Index.js';
 import { EventEmitter } from 'node:events';
 import HttpStatusCode from '../helpers/HttpStatusCode.js';
 import Exception from '../errors/Exception.js';

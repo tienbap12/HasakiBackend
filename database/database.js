@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 mongoose.set('strictQuery', true);
-import { print, OutputType } from '../helpers/print.js';
+import { print, OutputType } from '../Helpers/print.js';
 import Exception from '../errors/Exception.js';
 async function connect() {
   try {
@@ -18,5 +18,3 @@ async function connect() {
   }
 }
 export default connect;
-
-// connect();

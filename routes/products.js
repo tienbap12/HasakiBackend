@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
-import { productController } from '../controllers/index.js';
-import checkToken from '../authentication/auth.js';
+import { productController } from '../Controllers/Index.js';
+import checkToken from '../Authentication/Auth.js';
 
 //get products
 router.get('/', productController.getAllProducts);

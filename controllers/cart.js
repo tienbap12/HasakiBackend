@@ -1,5 +1,5 @@
 import HttpStatusCode from '../helpers/HttpStatusCode.js';
-import { cartRepository } from '../repositories/index.js';
+import { cartRepository } from '../Repositories/Index.js';
 
 const addToCart = async (req, res) => {
   try {

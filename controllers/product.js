@@ -1,34 +1,7 @@
 import HttpStatusCode from '../helpers/HttpStatusCode.js';
-import { productRepository } from '../repositories/index.js';
+import { productRepository } from '../Repositories/Index.js';
 import { Product } from '../models/index.js';
-import { MAX_RECORDS } from '../Global/constants.js';
-
-//Lấy danh sách sản phẩm không filter
-// async function getAllProducts(req, res) {
-//   try {
-//     // Lấy danh sách sản phẩm từ cơ sở dữ liệu
-//     const products = await Product.find();
-
-//     if (products.length <= 0) {
-//       // Nếu danh sách sản phẩm rỗng, trả về lỗi 400 và thông báo
-//       return res.status(HttpStatusCode.BAD_REQUEST).json({
-//         message: 'Lấy danh sách sản phẩm thất bại',
-//       });
-//     }
-
-//     // Nếu có sản phẩm, trả về danh sách sản phẩm và mã thành công 200
-//     return res.status(HttpStatusCode.OK).json({
-//       message: 'Lấy danh sách sản phẩm thành công',
-//       data: products,
-//     });
-//   } catch (error) {
-//     res.status(HttpStatusCode.INTERNAL_SERVER_ERROR).json({
-//       message: 'Lấy danh sách sản phẩm thất bại',
-//     });
-//   }
-// }
-
-//filter
+import { MAX_RECORDS } from '../Global/Constants.js';
 
 async function getAllProducts(req, res) {
   const totalProducts = await Product.find();
